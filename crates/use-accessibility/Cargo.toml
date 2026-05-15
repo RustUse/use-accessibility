@@ -1,0 +1,27 @@
+[package]
+name = "use-accessibility"
+description = "Composable facade crate for RustUse accessibility primitives"
+publish = true
+authors.workspace = true
+version.workspace = true
+edition.workspace = true
+homepage.workspace = true
+license.workspace = true
+repository.workspace = true
+rust-version.workspace = true
+documentation = "https://docs.rs/use-accessibility"
+keywords = ["accessibility", "contrast", "focus", "label", "motion"]
+categories = ["algorithms", "science"]
+
+[dependencies]
+use-accessibility-check.workspace = true
+use-accessibility-score.workspace = true
+use-accessible-label.workspace = true
+use-contrast.workspace = true
+use-focus-order.workspace = true
+use-motion-preference.workspace = true
+use-readable-text.workspace = true
+use-touch-target.workspace = true
+
+[lints]
+workspace = true

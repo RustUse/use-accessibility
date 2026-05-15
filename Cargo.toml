@@ -1,0 +1,38 @@
+[workspace]
+members = [
+    "crates/use-accessibility",
+    "crates/use-contrast",
+    "crates/use-readable-text",
+    "crates/use-touch-target",
+    "crates/use-focus-order",
+    "crates/use-accessible-label",
+    "crates/use-motion-preference",
+    "crates/use-accessibility-score",
+    "crates/use-accessibility-check",
+]
+resolver = "2"
+
+[workspace.package]
+authors = ["RustUse Contributors"]
+edition = "2024"
+homepage = "https://rustuse.org"
+license = "MIT OR Apache-2.0"
+publish = false
+readme = "README.md"
+repository = "https://github.com/RustUse/use-accessibility"
+rust-version = "1.95.0"
+version = "0.0.1"
+
+[workspace.dependencies]
+use-accessibility = { version = "0.0.1", path = "crates/use-accessibility" }
+use-accessibility-check = { version = "0.0.1", path = "crates/use-accessibility-check" }
+use-accessibility-score = { version = "0.0.1", path = "crates/use-accessibility-score" }
+use-accessible-label = { version = "0.0.1", path = "crates/use-accessible-label" }
+use-contrast = { version = "0.0.1", path = "crates/use-contrast" }
+use-focus-order = { version = "0.0.1", path = "crates/use-focus-order" }
+use-motion-preference = { version = "0.0.1", path = "crates/use-motion-preference" }
+use-readable-text = { version = "0.0.1", path = "crates/use-readable-text" }
+use-touch-target = { version = "0.0.1", path = "crates/use-touch-target" }
+
+[workspace.lints.rust]
+unsafe_code = "forbid"
