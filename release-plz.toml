@@ -1,0 +1,81 @@
+[workspace]
+release = false
+release_always = false
+changelog_update = false
+pr_labels = ["release"]
+max_analyze_commits = 2000
+
+[[package]]
+name = "use-contrast"
+release = true
+version_group = "rustuse-accessibility"
+
+[[package]]
+name = "use-readable-text"
+release = true
+version_group = "rustuse-accessibility"
+
+[[package]]
+name = "use-touch-target"
+release = true
+version_group = "rustuse-accessibility"
+
+[[package]]
+name = "use-focus-order"
+release = true
+version_group = "rustuse-accessibility"
+
+[[package]]
+name = "use-accessible-label"
+release = true
+version_group = "rustuse-accessibility"
+
+[[package]]
+name = "use-motion-preference"
+release = true
+version_group = "rustuse-accessibility"
+
+[[package]]
+name = "use-accessibility-score"
+release = true
+version_group = "rustuse-accessibility"
+
+[[package]]
+name = "use-accessibility-check"
+release = true
+version_group = "rustuse-accessibility"
+
+[[package]]
+name = "use-accessibility"
+release = true
+version_group = "rustuse-accessibility"
+changelog_update = true
+changelog_path = "./CHANGELOG.md"
+changelog_include = [
+  "use-contrast",
+  "use-readable-text",
+  "use-touch-target",
+  "use-focus-order",
+  "use-accessible-label",
+  "use-motion-preference",
+  "use-accessibility-score",
+  "use-accessibility-check",
+]
+
+[changelog]
+header = """# Changelog
+
+## Unreleased
+"""
+protect_breaking_commits = true
+sort_commits = "oldest"
+commit_parsers = [
+  { message = "^feat(?:\\([^)]+\\))?!?: .+", group = "Added" },
+  { message = "^fix(?:\\([^)]+\\))?!?: .+", group = "Fixed" },
+  { message = "^security(?:\\([^)]+\\))?!?: .+", group = "Security" },
+  { message = "^(?:refactor|perf|change)(?:\\([^)]+\\))?!?: .+", group = "Changed" },
+  { message = "^docs(?:\\([^)]+\\))?!?: .+", group = "Documentation" },
+  { message = "^(?:build|ci|chore|deps|test)(?:\\([^)]+\\))?!?: .+", group = "Tooling" },
+  { footer = "^changelog: ?ignore$", skip = true },
+  { message = "^.*", group = "Changed" },
+]
